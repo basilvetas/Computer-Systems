@@ -1,0 +1,9 @@
+.DS_Store
+*.pyc
+*.swp
+*.pb_2
+.vagrant/
+twitter_pb2.py
+twitter.pb
+.bash_history
+.sudo_as_admin_successful
