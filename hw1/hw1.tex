@@ -132,17 +132,20 @@ W4121 - Columbia University} %if necessary, replace with your course title
 \subparagraph{3. Find the five user IDs (field name: uid) that have tweeted the most.}
 
 % Protocol Buffers
-\section{Analyses using Protocol Buffers}
+\section{Analyses using Protocol Buffers} ~
+Using protocol buffers I found the number of deleted tweets to be 1554, the number of tweets that are replies to another tweet to be 2531, and the five user IDs that have tweeted the most to be 1269521828 (5 tweets), 392695315 (4 tweets), 424808364 (3 tweets), 1706901902 (3 tweets), 1471774728 (2 tweets). Note that the 5th place user ID is not unique as there were many users with 2 tweets, so I have listed the one returned by my query.
 
 \lstinputlisting[language=Python]{step2.py}
 
 % SQLite
-\section{Analyses on database records}
+\section{Analyses on database records} ~
+Using SQL I found the number of deleted tweets to be 1554, the number of tweets that are replies to another tweet to be 2531, and the five user IDs that have tweeted the most to be 1269521828 (5 tweets), 392695315 (4 tweets), 424808364 (3 tweets), 1706901902 (3 tweets), 23991910 (2 tweets). Note that the 5th place user ID is not unique as there were many users with 2 tweets, so I have listed the one returned by my query.
 
 \lstinputlisting[language=SQL]{step3.sql}
 
 % MongoDB
-\section{Analyses in MongoDB}
+\section{Analyses in MongoDB} ~
+Using MongoDB I found the number of deleted tweets to be 1554, the number of tweets that are replies to another tweet to be 2531, and the five user IDs that have tweeted the most to be 1269521828 (5 tweets), 392695315 (4 tweets), 424808364 (3 tweets), 1706901902 (3 tweets), 578015986 (2 tweets). Note that the 5th place user ID is not unique as there were many users with 2 tweets, so I have listed the one returned by my query.
 
 \lstinputlisting[language=JavaScript]{step4.js}
 
