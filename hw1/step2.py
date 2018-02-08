@@ -33,3 +33,11 @@ def decode():
 
 if __name__ == "__main__":
 	decode()
+
+# deleted tweet count: 1554
+# replies tweet count: 2531
+# uid: 1269521828 - tweet count: 5
+# uid: 392695315 - tweet count: 4
+# uid: 424808364 - tweet count: 3
+# uid: 1706901902 - tweet count: 3
+# uid: 1471774728 - tweet count: 2
