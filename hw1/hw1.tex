@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[a4paper]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{fourier}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[english]{babel}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+\usepackage{float}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{qtree}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage[titletoc,toc,title]{appendix}
+\usepackage{titlesec}
+
+% Define JavaScript
+\usepackage{color}
+
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+  language=JavaScript,
+  backgroundcolor=\color{lightgray},
+  extendedchars=true,
+  basicstyle=\footnotesize\ttfamily,
+  showstringspaces=false,
+  showspaces=false,
+  numbers=left,
+  numberstyle=\footnotesize,
+  numbersep=9pt,
+  tabsize=2,
+  breaklines=true,
+  showtabs=false,
+  captionpos=b
+}
+
+% Make links blue
+\hypersetup{colorlinks,urlcolor=blue}
+
+% Allows use of caligraphy letters
+\usepackage{calrsfs}
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+ 
+%\usepackage{stackengine}
+%\newcommand\letvdash[1]{\mathrel{
+  %\stackengine{1ex}{\vdash}{\;\;\scriptscriptstyle#1}{O}{c}{F}{T}{L}}}
+%\stackMath
+
+%\newcommand\letvudash[1]{\mathrel{\stackengine{.4ex}{\vdash}‌​{\;\;\scriptscriptst‌​yle#1}{U}{c}{F}{T}{L‌​}}}
+ 
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newtheorem{p}{}
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\setlength\parindent{24pt}
+
+% Add a page break between sections
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+\renewcommand{\thesection}{Step \arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+% Get variance, argmin and argmax commands
+\newcommand{\Var}{\mathrm{Var}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+\title{HW \#1}%replace X with the appropriate number
+\author{Basil Vetas\\ %replace with your name
+Computer Systems for Data Science (Spring 2018)\\
+W4121 - Columbia University} %if necessary, replace with your course title
+\maketitle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% JSON
+\section{Look at some JSON-encoded Tweets}
+
+\includegraphics[scale=0.65]{twitter_bot.png}
+\\Source: https://xkcd.com/1646/
+
+\paragraph{Questions}
+
+\subparagraph{1. Find the number of deleted messages in the dataset.}
+\subparagraph{2. Find the number of tweets that are replies to another tweet.}
+\subparagraph{3. Find the five user IDs (field name: uid) that have tweeted the most.}
+
+% Protocol Buffers
+\section{Analyses using Protocol Buffers}
+
+\lstinputlisting[language=Python]{step2.py}
+
+% SQLite
+\section{Analyses on database records}
+
+\lstinputlisting[language=SQL]{step3.sql}
+
+% MongoDB
+\section{Analyses in MongoDB}
+
+\lstinputlisting[language=JavaScript]{step4.js}
+
+% Reflection Questions
+\section*{Reflection Questions}
+
+\paragraph{1. Read the schema and protocol buffer definition files. What are the main differences between the two? Are there any similarities?}
+\paragraph{2. Describe one question that would be easier to answer with protocol buffers than via a SQL query.}
+\paragraph{3. Describe one question that would be easier to answer with MongoDB than via a SQL query.}
+\paragraph{4. Describe one question that would be easier to answer via a SQL query than using MongoDB.}
+\paragraph{5. What fields in the original JSON structure would be difficult to convert to relational database schemas?}
+\paragraph{6. In terms of lines of code, when did various approaches shine? Think about the challenges of defining schemas, loading and storing the data, and running queries.}
+\paragraph{7. What other metrics (e.g., time to implement, code redundancy, etc.) can we use to compare these different approaches? Which system is better by those measures?}
+\paragraph{8. How long did this lab take you? We want to make sure to target future labs to not take too much of your time.}
+
+\end{document} 
+
+
+

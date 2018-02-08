@@ -7,3 +7,9 @@ twitter_pb2.py
 twitter.pb
 .bash_history
 .sudo_as_admin_successful
+
+*.pdf
+*.out
+*.log
+*.aux
+*.png
