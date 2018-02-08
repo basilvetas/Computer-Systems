@@ -149,37 +149,37 @@ W4121 - Columbia University} %if necessary, replace with your course title
 % Reflection Questions
 \section*{Reflection Questions}
 
-\paragraph{1. Read the schema and protocol buffer definition files. What are the main differences between the two? Are there any similarities?}
+\paragraph{1. Read the schema and protocol buffer definition files. What are the main differences between the two? Are there any similarities?}\mbox{}\\ 
 
 The main differences between the schema file, twitter.ddl, and the protocol butter definition file, twitter.proto, are firstly that twitter.ddl makes use of id's, which allows for distinct relational tables and a schema that is very human-interpretable. In contrast, the twitter.proto file seems more hierarchical by making use of nested struct-like definitions, and enforcing them via 'required,' 'repeated,' and 'optional' tags. Otherwise, they are relatively similar in terms of the categories and elements they have used to decompose twitter.json.
 
-\paragraph{2. Describe one question that would be easier to answer with protocol buffers than via a SQL query.}
+\paragraph{2. Describe one question that would be easier to answer with protocol buffers than via a SQL query.}\mbox{}\\
 
+Null
 
-\paragraph{3. Describe one question that would be easier to answer with MongoDB than via a SQL query.}
+\paragraph{3. Describe one question that would be easier to answer with MongoDB than via a SQL query.}\mbox{}\\
 
+Null
 
-\paragraph{4. Describe one question that would be easier to answer via a SQL query than using MongoDB.}
+\paragraph{4. Describe one question that would be easier to answer via a SQL query than using MongoDB.}\mbox{}\\
 
+Null
 
-\paragraph{5. What fields in the original JSON structure would be difficult to convert to relational database schemas?}
+\paragraph{5. What fields in the original JSON structure would be difficult to convert to relational database schemas?}\mbox{}\\
 
+Null
 
-\paragraph{6. In terms of lines of code, when did various approaches shine? Think about the challenges of defining schemas, loading and storing the data, and running queries.}
+\paragraph{6. In terms of lines of code, when did various approaches shine? Think about the challenges of defining schemas, loading and storing the data, and running queries.}\mbox{}\\
 
 In terms of lines of code, MongoDB seems to shine in terms of defining schemas, loading and storing data, given that it did not require any specific scripts or config files to do these things. The downside of MongoDB is that the data is less structured for queries. SQL, however, definitely shines in terms of the queries for this assignment, and is probably second best in terms of defining schemas, loading and storing data, requiring just the twitter.ddl schema and createdb.py. Lastly, the protocol buffer required the most work to define the schema, load, store and query data given that it required twitter.proto, encode.py as well as my own script to do each of these, respectively.   
 
-\paragraph{7. What other metrics (e.g., time to implement, code redundancy, etc.) can we use to compare these different approaches? Which system is better by those measures?}
+\paragraph{7. What other metrics (e.g., time to implement, code redundancy, etc.) can we use to compare these different approaches? Which system is better by those measures?}\mbox{}\\
 
 Obviouly lines of code is a decent metric. Given that we were provided a lot of the setup schemas and scripts, it is difficult to assess the time to implement if starting from scratch, however for the queries alone SQL was definitely the quickest by time to implement. For code redundancy, because of the fact that the protocol buffer queries required similar code to the encode.py file, I would have to say these were the worst in terms of code redundancy. Neither SQL or MongoDB seem to have too much code redundancy.  Finally, another metric that I think is important but sometimes overlooked when evaluating programming languages in general is the developer community and documentation available online. For these, SQL definitely shines because of its widespread use, however MongoDB I felt was also quite well documented, despite probably having a smaller developer community. Finally, in terms of dev community and documentation, protocol buffers were definitely the worst.
 
-\paragraph{8. How long did this lab take you? We want to make sure to target future labs to not take too much of your time.}
+\paragraph{8. How long did this lab take you? We want to make sure to target future labs to not take too much of your time.}\mbox{}\\
 
-The VM setup took a couple of hours (2-3) unfortunately because some of the instructions were outdated and I had to figure out how to edit the Vagrantfile myself to make some adjustments. 
-
-Otherwise, the protocol buffer portion took a couple of hours because I had to learn the documentation.  The SQL portion was quite quick for me, probably under an hour, and finally the MongoDB took maybe a couple of hours because I haven't used their query language before and there was not a clear schema file like the first two provided. 
-
-Lastly, to create a nice latex file and write up these reflection questions took about two hours. Overall the amount of coding work was pretty ideal, while the setup and writeup portions took more time and I would have liked but now that it is done it should be quicker next time.
+The VM setup took two to three hours unfortunately because some of the instructions were outdated and I had to figure out how to edit the Vagrantfile myself to make some adjustments. Otherwise, the protocol buffer portion took a couple of hours because I had to learn the documentation.  The SQL portion was quite quick for me, probably under an hour, and finally the MongoDB took maybe a couple of hours because I haven't used their query language before and there was not a clear schema file like the first two provided. Lastly, to create a nice LaTex file and write up these reflection questions took about two hours. Overall the amount of coding work was pretty ideal, while the setup and writeup portions took more time than I would have liked but now that it is done it should be quicker next time.
 
 \end{document} 
 
